@@ -4,7 +4,7 @@ trait Show[A] {
   def show(a: A): String
 }
 
-case class Position(x: Int, y: Int)
+case class Position(xPosition: Int, yPosition: Int)
 
 object Show {
   //show implementation for long type
@@ -22,6 +22,6 @@ object Show {
   //show implementation for Position class type
   val positionShow: Show[Position] =
     new Show[Position] {
-      override def show(position: Position): String = s"Pos(x: ${position.x}, y: ${position.y})"
+      override def show(position: Position): String = s"Pos(x: ${position.xPosition}, y: ${position.yPosition})"
     }
 }
